@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/stylesheets/button.css">
+<section class="makePost">
+    <script>
+                function showHide() {
+                    var box = document.getElementById("box")
+                    if (box.style.visibility == "hidden") {
+                       box.style.visibility = "visible"
+                       box.style.transition = "height 0.5s"
+                       box.style.height = form.scrollHeight + "px";
+                       box.style.width = width + 'px';
+                       }
+                    else {
+                       box.style.visibility = "hidden"
+                       box.style.transition = "0.5s"
+                       box.style.height = 0 + 'px';
+                    }
+            }
+    </script>
+    <button type="submit" class="btn anim" onclick="showHide()">Add New Post</button>
+    <div id="box">
+            <div class="form" id="form">
+                    <form action="/userPost" method="POST">
+                    <input type="text" name="posttitle" placeholder="Post Title" />
+                    <input type="text" name="postimage" placeholder="Image Link" />
+                    <textarea name="postdescription" placeholder="Your text"></textarea>
+                    <input type="submit" value="Send" />
+                    </form>
+            </div>
+    </div>     
+</section>

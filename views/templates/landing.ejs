@@ -1,0 +1,105 @@
+<link rel="stylesheet" href="/stylesheets/landing.css">
+<% include ../partials/navbar %>
+<% include ../partials/button %>
+<section class="major one">
+    <div class="ads"></div>
+    <div class="grid">
+        <div><h1 class="whatgrid">POPULAR ANIME OF THE WEEK</h1></div>
+        <div class="scrollmenu">
+            <%animes.forEach(x=>{%>
+            <div class="scrollmenuitem">
+                <a href="http://localhost:3000/anime/<%=x.name%>">
+                <img class='scrollimage' src="<%=x.img%>" alt="Could not load">
+                <div class="scrollimagename"><%=x.name%></div>
+                </a>
+            </div>
+            <%})%>
+            <div class="gridtitle">
+                <a class="main" href="">See All</a>
+            </div>
+        </div>
+    </div>
+    <div class="ads"></div>
+</section>
+<section class="major">
+    <div class="ads"></div>
+    <div class="grid">
+        <div><h1 class="whatgrid">ANIME THIS SEASON</h1></div>
+        <div class="scrollmenu">
+            <%seasonalAnime.forEach(anime=>{%>
+            <div class="scrollmenuitem">
+                <a href="http://localhost:3000/anime/<%=anime.name%>">
+                <img class='scrollimage' src="<%=anime.img%>" alt="Could not load">
+                <div class="scrollimagename"><%=anime.name%></div>
+                </a>
+            </div>
+            <%})%>
+            <div class="gridtitle">
+                <a class="main" href="">See All</a>
+            </div>
+        </div>
+    </div>
+    <div class="ads"></div>
+</section>
+<section class="major">
+    <div class="ads"></div>
+    <div class="grid">
+        <div><h1 class="whatgrid">MOVIES THIS SEASON</h1></div>
+        <div class="scrollmenu">
+            <%seasonalMovies.forEach(movie=>{%>
+            <div class="scrollmenuitem">
+                <a href="http://localhost:3000/anime/<%=movie.name%>">
+                <img class='scrollimage' src="<%=movie.img%>" alt="Could not load">
+                <div class="scrollimagename"><%=movie.name%></div>
+                </a>
+            </div>
+            <%})%>
+            <div class="gridtitle">
+                <a class="main" href="">See All</a>
+            </div>
+        </div>
+    </div>
+    <div class="ads"></div>
+</section>
+<section class="major">
+    <div class="ads"></div>
+    <div class="grid">
+        <div><h1 class="whatgrid">MOST LOVED CHARACTERS</h1></div>
+        <div class="scrollmenu">
+            <%Characters.forEach(Character=>{%>
+            <div class="scrollmenuitem">
+                <a>
+                <img class='scrollimage' src="<%=Character.img%>" alt="Could not load">
+                <div class="scrollimagename"><%=Character.name%></div>
+                </a>
+            </div>
+            <%})%>
+            <div class="gridtitle">
+                <a class="main" href="">See All</a>
+            </div>
+        </div>
+    </div>
+    <div class="ads"></div>
+</section>
+<section class="major five">
+    <div class="ads"></div>
+    <div class="grid">
+        <div><h1 class="whatgrid">MOST HATED CHARACTERS</h1></div>
+        <div class="scrollmenu">
+            <%hated.forEach(Char=>{%>
+            <div class="scrollmenuitem">
+                <a>
+                <img class='scrollimage' src="<%=Char.img%>" alt="Could not load">
+                <div class="scrollimagename"><%=Char.name%></div>
+                </a>
+            </div>
+            <%})%>
+            <div class="gridtitle">
+                <a class="main" href="">See All</a>
+            </div>
+        </div>
+    </div>
+    <div class="ads"></div>
+</section>
+<% include ../partials/footer %>
+<script type="text/javascript" src="/js/landing.js"></script>

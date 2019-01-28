@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/stylesheets/showtemp.css">
+<div class="characters">
+    <%for(i=0;i<=characters.length-1;i++){%>
+        <div class="chardetail">
+            <div><img class="charimg" src="<%=characters[i].image%>" alt=""></div>
+            <div><p><%=characters[i].name%></p></div> 
+            <p class="voicetitle">VoiceActors</p> 
+            <%for(j=0;j<=characters[i].voiceActors.English.length-1;j++){%>
+            <div class="voice">
+                <%if(j==0){%>             
+                    <p><img class="background-image" alt="English:" src="/assets/img/flag.png" >  <%=characters[i].voiceActors.English[j].name%></p>
+                <%} %> 
+            </div>                                           
+            <%} %>
+            <%for(j=0;j<=characters[i].voiceActors.Japanese.length-1;j++){%>
+            <div class="voice">
+                <%if(j==0){%>
+                    <p><img class="background-image" alt="English:" src="/assets/img/japflag.jpeg" >   <%=characters[i].voiceActors.Japanese[j].name%></p>        
+                <%} %>
+            </div>                               
+            <%} %>
+        </div>   
+    <%} %>    
+</div>

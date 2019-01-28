@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/stylesheets/showsimilar.css">
+<div class="similars">
+    <%similars.forEach(similar=>{ %>
+    <div class="similardetail">
+        <div class="similarsubdetails">
+            <p class="similartitle"><%=similar.name%></p>
+            <p class="run"><%=similar.run.from%>--<%=similar.run.to%></p>
+            <p class="similarplot"><%=similar.details%></p>
+            <div class="button"><a href="http://localhost:3000/anime/<%=similar.name%>"class="morebutton">More</a></div>
+        </div>
+        <img class="similarimg" src="<%=similar.img%>" alt="could not load">
+    </div>
+    <% })%>
+</div>
+<script>
+    a=document.querySelectorAll('.similarplot')
+    a.forEach(element => {
+        element.innerHTML = element.innerHTML.substring(0,1700)+'......';        
+    });
+</script>

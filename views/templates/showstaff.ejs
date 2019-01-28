@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/stylesheets/showtemp.css">
+<div class="characters">
+    <%staffs.forEach(staff=>{ %>
+    <div class="chardetail">
+        <img  class="charimg" src="<%=staff.image%>" alt="Could not load">
+            <div class="staffname"><%=staff.name%></div>
+            <div class="stafffeild">
+                <div class="voicetitle">Field:</div>
+                <div ><%=staff.field%></div>
+            </div>
+            <div class="voicetitle">Also Worked in</div>
+            <%staff.otherworks.forEach(work=>{ %>
+                <div><%=work%></div>
+            <% })%>
+    </div>
+    <% })%>
+</div>

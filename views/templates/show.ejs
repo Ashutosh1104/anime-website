@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="/stylesheets/show.css">
+<% include ../partials/navbar %>
+<% include ../partials/button %>
+<section class="show">
+    <div class='ads'></div>
+    <div class='anime'>
+        <div class='names'>
+            <div class="name"><%=anime.name%></div>
+            <div class="alt">Alt Name:<%=anime.alternativeName%></div>        
+        </div>
+        <div class=top-level>
+            <div class="card">
+                <div class="card-item"><%=anime.type%></div> 
+                <div class="card-item"><%=anime.episodes%> Eps</div>
+                <div class="card-item">Rank #<%=anime.rank%></div>
+                <div class="card-item"><%=anime.rating%> out of 5</div>
+                <div class="card-item"><%=anime.stuOrpub%></div>
+                <div class="card-item last"><%=anime.season.time%>-<%=anime.season.start%></div>
+            </div>
+            <div class="details">
+                <div class="col">
+                    <img src="<%=anime.img%>" alt="Could not load">
+                </div>
+                <div class="detailmax col">
+                    <p><%=anime.plot%></p>
+                    <p>Source: <%=anime.source%></p>
+                    <div class="tags">
+                        <%for(i=0;i<=anime.tags.length-1;i++){%>
+                            <div class="tag button"><%=anime.tags[i]%></div>
+                        <%}%>
+                    </div>
+                </div>
+            </div>
+            <div class="card card2">
+                <div class="1 card-item item2">Pictures</div>
+                <div class="2 card-item item2">Staff</div>
+                <div class="3 card-item item2 visible">Characters</div>
+                <div class="4 card-item item2">Recommendations</div>
+                <div class="5 card-item item2 last">Reviews</div>
+            </div>
+        </div>
+        <div class="1 box invisiblebox">
+            <p class="Reviews">WE are having some issue with Reviews Please visit Us later for this</p>                 
+        </div>
+        <div class="2 box invisiblebox">
+            <% include ../templates/showstaff %> 
+        </div>
+        <div class="3 box">
+            <% include ../templates/showcharacters %>  
+        </div>
+        <div class="4 box invisiblebox">
+            <% include ../templates/showsimilar %>                   
+        </div>
+        <div class="5 box invisiblebox">
+            <p class="Reviews">WE are having some issue with Reviews Please visit Us later for this</p>            
+        </div>
+    </div>   
+    <div class="ads"></div>      
+</section>
+<% include ../partials/footer %>  
+<script type="text/javascript" src="/js/show.js"></script>
