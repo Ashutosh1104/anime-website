@@ -1,0 +1,74 @@
+.similars{
+    display: flex;
+    flex-direction: column;
+    max-width: 1360;
+}
+.similardetail{
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0px;
+    justify-content: space-evenly;
+    font-family: Rubik,Lato,"Lucida Grande","Lucida Sans Unicode",Tahoma,Sans-Serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.35;  
+}
+.similarsubdetails{
+    padding-right: 3rem;
+}
+.similarimg{
+    height: 400;
+    width: inherit;
+    border: 2px solid rgb(68, 85, 121);
+    border-radius: 20%;
+    margin-bottom: 1em;
+}
+.similartitle{
+    font-size:32px;
+    text-align: center;
+}
+.similarplot{
+    font-size: 16px;
+    padding-bottom: 30px;
+}
+.run{
+    text-align: center;
+}
+.morebutton{
+    text-decoration: none;
+    padding: 20px 50px;;
+    background: linear-gradient(#fff,rgba(156,39,176,.2));
+    border-radius: 30%;
+    text-align: center;
+}
+.button{
+    display: flex;
+    justify-content: center;
+}
+
+.Reviews{
+    text-align: center;
+    padding: 20px;
+    font-size: 80px;
+}
+@media (max-width: 800px){
+    .similarplot {
+        visibility: collapse;
+        height: 0px;
+    }
+    .similardetail{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .similarimg{
+        height: inherit;
+        width: inherit;
+    }
+    .similartitle{
+        font-size: 20px;
+    }
+    .morebutton{
+        padding: 10px 20px;
+
+    }
+}

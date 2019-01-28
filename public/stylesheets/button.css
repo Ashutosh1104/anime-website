@@ -1,0 +1,122 @@
+.makePost{
+  background-color: #242D40;
+}
+
+.makePost p {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+  
+  .anim {
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 3px hsla(0, 0%, 0%, .6);
+    width: 15em;
+    padding: 20px;
+    color: hsla(255, 255%, 255%, 1);
+    text-align: center;
+    text-shadow: 0 2px 0 hsla(0, 0%, 0%, .25);
+    font: 400 1.5em /1 'Raleway', sans-serif;
+    letter-spacing: 4px;
+    background: hsla(155, 95%, 35%, 1);
+    cursor: pointer;
+  }
+  
+  .anim {
+    animation: jiggle 2s ease-in infinite;
+  }
+  
+  @keyframes jiggle {
+    48%, 62% {
+      transform: scale(1.0, 1.0)
+    }
+    50% {
+      transform: scale(1.1, 0.9)
+    }
+    56% {
+      transform: scale(0.9, 1.1) translate(0, -5px)
+    }
+    59% {
+      transform: scale(1.0, 1.0) translate(0, -3px)
+    }
+  }
+  #box{
+    visibility: collapse;
+  }
+  
+  .form{
+    font: 95% Arial, Helvetica, sans-serif;
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 16px;
+  }
+  .form input[type="text"],
+  .form input[type="date"],
+  .form input[type="datetime"],
+  .form input[type="email"],
+  .form input[type="number"],
+  .form input[type="search"],
+  .form input[type="time"],
+  .form input[type="url"],
+  .form textarea,
+  .form select
+  {
+      outline: none;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      width: 100%;
+      background: #242D40;
+      margin-bottom: 4%;
+      border: 2px solid #454fed ;
+      border-radius: 4%;
+      padding: 3%;
+      color: #fff;
+      font: 95% Arial, Helvetica, sans-serif;
+  }
+  .form input[type="text"]:focus,
+  .form input[type="date"]:focus,
+  .form input[type="datetime"]:focus,
+  .form input[type="email"]:focus,
+  .form input[type="number"]:focus,
+  .form input[type="search"]:focus,
+  .form input[type="time"]:focus,
+  .form input[type="url"]:focus,
+  .form textarea:focus,
+  .form select:focus
+  {
+      box-shadow: 0 0 5px #43D1AF;
+      padding: 3%;
+      border: 1px solid #43D1AF;
+  }
+  .form input[type="submit"],
+  .form input[type="button"]{
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      width: 100%;
+      padding: 3%;
+      background: #43D1AF;
+      border-bottom: 2px solid #30C29E;
+      border-top-style: none;
+      border-right-style: none;
+      border-left-style: none;   
+      color: #fff;
+  }
+  .form input[type="submit"]:hover,
+  .form input[type="button"]:hover{
+      background: #25e8f8;
+  }
+  
+ @media(max-width:800px){
+    .form{
+      max-width: 350px;
+    }
+    .makePost{
+        padding-top: 150px;
+      }
+    .anim{
+        width: 10em;
+    }
+  }
