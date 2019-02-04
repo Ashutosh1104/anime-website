@@ -11,7 +11,6 @@ app.get('/',function(req,res){
     Promise.all([anime.getTop100('week'),anime.getTopCharacters(15,'loved')]).then((values)=>{
         anime.getSeasonal('').then(result=>{
             anime.getTopCharacters(15,'hated').then(hated=>{
-                //res.send(values)
                 res.render('templates/landing',{animes:values[0],Characters:values[1],hated:hated,seasonalAnime:result.anime.slice(0,15),seasonalMovies:result.movies})
             })
         })
