@@ -1,10 +1,26 @@
 <link rel="stylesheet" href="/stylesheets/slider.css">
 <img class="headerimage" src="/assets/img/landing/116.png" alt="Could not find"></li>
-    <!-- <li><img class="headerimage" src="/assets/img/landing/135.png" alt="Could not find"></li>
-    <li><img class="headerimage" src="/assets/img/landing/17.png" alt="Could not find"></li>
-    <li><img class="headerimage" src="/assets/img/landing/28.png" alt="Could not find"></li>
-    <li><img class="headerimage" src="/assets/img/landing/36.png" alt="Could not find"></li>
-    <li><img class="headerimage" src="/assets/img/landing/72.png" alt="Could not find"></li>
-    <li><img class="headerimage" src="/assets/img/landing/95.png" alt="Could not find"></li>
-    <li><img class="headerimage" src="/assets/img/landing/j12.jpg" alt="Could not find"></li>
-    <li><img class="headerimage" src="/assets/img/landing/kiminonawa.jpg" alt="Could not find"></li>-->
+<script>
+    var index=0;
+    var indexalt=0;
+    var img=['/assets/img/landing/116.png','/assets/img/landing/17.png','/assets/img/landing/36.png',
+           '/assets/img/landing/72.png','/assets/img/landing/95.png','/assets/img/landing/j12.jpg','/assets/img/landing/kiminonawa.jpg']
+    var imgalt=['/assets/img/landing/1.jpg','/assets/img/landing/2.jpg','/assets/img/landing/3.jpg','/assets/img/landing/4.jpg',
+           '/assets/img/landing/5.jpg','/assets/img/landing/6.jpg','/assets/img/landing/7.jpg','/assets/img/landing/8.jpg','/assets/img/landing/9.jpg',
+           '/assets/img/landing/10.jpg','/assets/img/landing/11.jpg']
+
+    var x = window.matchMedia("(max-width: 600px)")
+    setInterval(slide,2000)
+    function slide(){
+        if (x.matches) { // If media query matches
+            document.querySelector('.headerimage').setAttribute("src",imgalt[indexalt])
+            indexalt=indexalt+1
+            if(indexalt==imgalt.length){indexalt=0}
+        } 
+        else {
+            document.querySelector('.headerimage').setAttribute("src",img[index]);
+            index=index+1
+            if(index==img.length){index=0}
+        }
+    }
+</script>
